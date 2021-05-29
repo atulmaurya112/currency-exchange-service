@@ -24,8 +24,6 @@ public class CorrencyController {
 		if(currencyExchange == null) {
 			throw new RuntimeException("Data not available for " + from + " and " + to);
 		}
-		
-//		CurrencyExchange currencyExchange = new CurrencyExchange(1L, "USD", "INR", BigDecimal.valueOf(65));
 		String port = environment.getProperty("local.server.port");
 		currencyExchange.setEnvironment(port);
 		return currencyExchange;
